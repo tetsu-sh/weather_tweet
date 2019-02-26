@@ -59,7 +59,7 @@ high_delta=float(tomorrow_high)-float(today_high)
 if low_delta > 4:
     message_low="明日の朝は今日比べて"+str(abs(round(low_delta)))+"℃暖かいです"
 elif low_delta < -4:
-    message_low="明日の朝は昨日と比べて"+str(abs(round(low_delta)))+"℃寒くなります"
+    message_low="明日の朝は今日と比べて"+str(abs(round(low_delta)))+"℃寒くなります"
 
 if  high_delta > 4:
     message_high="明日の昼間は今日よりも"+str(abs(round(high_delta)))+"℃暖かくなります"
