@@ -49,9 +49,6 @@ else:
     today_high=today_high_data[1].string
     today_low=today_low_data[1].string
 
-
-
-print(today_high,today_low,tomorrow_high,tomorrow_low)
 message_low=""
 message_high=""
 low_delta=float(tomorrow_low)-float(today_low)
@@ -69,6 +66,6 @@ elif high_delta < -4:
 auth =tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN,ACCESS_SECRET)
 api=tweepy.API(auth)
-print(message_high,message_low,high_delta)
+
 if message_low or message_high  !="":
     api.update_status(message_low+" "+message_high)
